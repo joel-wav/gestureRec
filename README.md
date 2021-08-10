@@ -4,7 +4,8 @@ This project enables you to perform various functions on videos/basic games (Or 
 ## Instructions to get it to work
 
 ### Arduino
-Upload the code on to your arduino microcontroller
+Upload the code in the `gestureRecognition.ino` file on to your arduino microcontroller.
+Make sure you connect your microcontroller to the right trigger and echo pins as written in the code.
 
 ### Python
 You  will need a few python libraries for this to work i.e. `pyserial` and `pyautogui`.
