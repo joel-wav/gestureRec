@@ -29,36 +29,28 @@ void calculate_distance(int trigger, int echo)
 void loop() 
 { 
     calculate_distance(trigger1,echo1);
-    distL = dist; //get distance of left sensor
+    distL = dist;
     
-    /*
     calculate_distance(trigger2,echo2);
-    distR = dist; //get distance of right sensor
-    */
-
-    //Pause Modes -Hold
-    if ((distL > 40 /*&& distR>40*/) && (distL < 50 /*&& distR<50*/)) //Detect both hands
+    distR = dist; 
+    
+    if ((distL > 40 && distR > 40) && (distL < 50 && distR<50)) 
     {
         Serial.println("Play/Pause"); 
         delay (500);
     }
     
-    
     calculate_distance(trigger1,echo1);
     distL = dist;
     
-    /*
     calculate_distance(trigger2,echo2);
     distR = dist;
-    */
-
-    //Control Modes
-    //Lock Left - Control Mode
+    
     if (distL>=13 && distL<=17)
     {
-        delay(100); //Hand Hold Time
+        delay(100); 
         calculate_distance(trigger1,echo1);
-        distL =dist;
+        distL = dist;
         if (distL >= 13 && distL <= 17)
         {
             Serial.println("Left Locked");
@@ -66,12 +58,12 @@ void loop()
             {
                 calculate_distance(trigger1,echo1);
                 distL = dist;
-                if (distL<10) //Hand pushed in 
+                if (distL<10) 
                 {
                     Serial.println ("Vup"); 
                     delay (300);
                 }
-                if (distL>20) //Hand pulled out
+                if (distL>20)
                 {
                     Serial.println ("Vdown");
                     delay (300);
@@ -79,11 +71,10 @@ void loop()
             }
         }
     }
-/*
-    //Lock Right - Control Mode
+
     if (distR>=13 && distR<=17)
     {
-        delay(100); //Hand Hold Time
+        delay(100); 
         calculate_distance(trigger2,echo2);
         distR =dist;
         if (distR>=13 && distR<=17)
@@ -93,12 +84,12 @@ void loop()
             {
                 calculate_distance(trigger2,echo2);
                 distR = dist;
-                if (distR<10) //Right hand pushed in
+                if (distR<10) 
                 {
                     Serial.println ("Rewind");
                     delay (300);
                 }
-                if (distR>20) //Right hand pulled out
+                if (distR>20) 
                 {
                     Serial.println ("Forward"); 
                     delay (300);
@@ -106,5 +97,5 @@ void loop()
             }
         }
     }
-*/
+
 }
