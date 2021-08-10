@@ -13,6 +13,8 @@ You  will need a few python libraries for this to work i.e. `pyserial` and `pyau
 To install the respective libraries, use a terminal to navigate to the directory where Python has been installed and use these commands
 ```
 python -m pip install pyserial
+```
+```
 python –m pip install pyautogui
 ```
 Change the port number and the baud rate to the required values in the `conn.py` code (line 5).
