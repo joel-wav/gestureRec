@@ -1,5 +1,5 @@
 # Hand Gesture recognition
-This project enables you to perform various functions on videos/ basic games (Or anything that requires the arrow keys and spacebar) using 2 HC-SR04 sensors and an Arduino.
+This project enables you to perform various functions on videos/basic games (Or anything that requires the arrow keys and spacebar) using 2 HC-SR04 sensors and an Arduino.
 
 ## Instructions to get it to work
 
@@ -25,4 +25,4 @@ Run the code
 - Start away from the right sensor and move in to Rewind (right arrow key). 
 - Start from near the left sensor and move away to increase volume (Up arrow key).
 - Start away from the left sensor and move in to decrease volume (Down arrow key). 
-- You can use this with anything that may require the spacebar and arroykeys and not just control videos
+- You can use this with anything that may require the spacebar and arrowkeys and not just control videos
